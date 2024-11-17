@@ -1,0 +1,142 @@
+/* Reset Default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body dengan gradasi dinamis */
+body {
+    background: linear-gradient(-45deg, #ff0000, #8b0000, #000000, #550000);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Animasi background */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Intro Section */
+.intro {
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.intro-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.intro-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.start-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.start-button:hover {
+    transform: scale(1.1);
+    background: #ffffff;
+    color: #ff0000;
+}
+
+/* Form Container */
+.form-container {
+    display: none;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: slideUp 1s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #ff0000;
+    font-size: 1.8rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.submit-button:hover {
+    transform: scale(1.1);
+    background: white;
+    color: #ff0000;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
